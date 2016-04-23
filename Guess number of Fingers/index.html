@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html>
+<head>
+
+    <title>Guess the number of Fingers</title>
+
+    <meta charset = "utf-8" />
+    <meta http-equiv = "Content-type" content = "text/html; charset=utf-8" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1" />
+
+    <style>
+
+    	body p {
+    		font-family: Verdana, Geneva, sans-serif;
+    		color: #000000;
+    	}
+
+    	#container {
+    		background-color: #F1F1F1;
+    		border: 2px solid blue;
+    		border-radius: 15px;
+    		padding: 15px 24px 35px 40px;
+    		margin: 0 auto;
+    		width: 350px;
+    		position: center;
+    	}
+
+    	#myButton {
+    		color: #FFFAD3;
+    		background-color: #4CAF50;
+    	}
+
+    	#answer {
+   			width: 50px;
+       	}
+    </style>
+   
+</head>
+
+<body>
+
+	<div id="container">
+
+		<p>Guess how many finger am I holding up?</p>
+		<input id = "answer" />
+		<button id = "myButton">Submit</button>
+
+	</div>
+
+	<!-- SCRIPT FOR RANDOM NUMBER OF FINGERS -->
+	<script type = "text/javascript">
+
+		document.getElementById("myButton").onclick=function() {
+
+		var x = Math.random();
+
+		x = 6*x;
+
+		x = Math.floor(x);
+
+		if (x == document.getElementById("answer").value) {
+
+			alert("That is corrent!");
+
+		} else {
+
+			alert("That's wrong! My number was "+x);
+		}
+	}
+
+	</script>
+
+</body>
+</html>
